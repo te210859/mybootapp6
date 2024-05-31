@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp8.mybootapp8;
+package jp.te4a.spring.boot.myapp9.mybootapp9;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface BookRepository extends JpaRepository<BookBean, Integer>{
+}
+
 @Repository
 public class BookRepository {
   private final ConcurrentMap<Integer, BookBean> bookMap = new ConcurrentHashMap<>();
@@ -31,4 +35,5 @@ public class BookRepository {
     return bookMap.get(id);
   }
 }
+
 
