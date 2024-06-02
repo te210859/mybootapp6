@@ -2,6 +2,8 @@ package jp.te4a.spring.boot.myapp9.mybootapp9;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +25,7 @@ public class BookService {
     return bookForm;
   }
   
-  public void delete(Integer id) {  bookRepository.delete(id); }
+  public void delete(Integer id) {  delete(id); }
   public List<BookForm> findAll() {
     List<BookBean> beanList = bookRepository.findAll();
     List<BookForm> formList = new ArrayList<BookForm>();
@@ -35,10 +37,15 @@ public class BookService {
     return formList;
     }
   public BookForm findOne(Integer id) {
-    BookBean bookBean = bookRepository.findOne(id);
+    Optional<BookBean> bookBean = findById(id);
     BookForm bookForm = new BookForm();
     BeanUtils.copyProperties(bookBean, bookForm);
     return bookForm;
+  }
+
+  private Optional<BookBean> findById(Integer id) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'findById'");
   }
 }
 
