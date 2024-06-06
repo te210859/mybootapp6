@@ -25,7 +25,7 @@ public class BookService {
     return bookForm;
   }
   
-  public void delete(Integer id) {  delete(id); }
+  public void delete(Integer id) {  bookRepository.deleteById(id); }
   public List<BookForm> findAll() {
     List<BookBean> beanList = bookRepository.findAll();
     List<BookForm> formList = new ArrayList<BookForm>();
@@ -43,9 +43,7 @@ public class BookService {
     return bookForm;
   }
 
-  private Optional<BookBean> findById(Integer id) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'findById'");
+  public Optional<BookBean> findById(Integer id) {
+    return bookRepository.findById(id);
   }
 }
-
