@@ -1,27 +1,20 @@
-package jp.te4a.spring.boot.myapp9.mybootapp9;
+package jp.te4a.spring.boot.myapp11.mybootapp11;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "books")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class BookBean {
-  @Id
-  @GeneratedValue
+public class BookForm {
   private Integer id ;
-  @Column(nullable = false)
+  @NotNull
+  @Size(min = 3)
   private String title;
+  @Size(min = 3, max = 20)
   private String writter;
   private String publisher;
+  @Min(0)
   private Integer price;
 }
-
-
-
 
 
