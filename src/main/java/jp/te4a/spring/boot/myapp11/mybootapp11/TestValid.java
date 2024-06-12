@@ -19,7 +19,7 @@ public class TestValid{
         String message() default  "input other than  {param}.";
         // Classオブジェクトを得る（戻り値とする）メソッドgroups()
         // デフォルト値は空のクラス
-        Class<?>[] groups() default {};
+        Class<?>[] groups() default{};
         // Payloadクラスを継承したClassオブジェクトを得る
         // （戻り値とする）メソッドpayload()、デフォルト値は空のクラス
         Class<? extends Payload>[] payload() default{};

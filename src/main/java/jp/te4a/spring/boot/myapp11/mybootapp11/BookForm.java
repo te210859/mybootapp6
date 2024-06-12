@@ -9,7 +9,7 @@ import jp.te4a.spring.boot.myapp11.mybootapp11.TestValid.Valid;
 @Data
 @NoArgsConstructor
 public class BookForm {
-  private Integer id ;
+  private Integer id;
   @NotNull
   @Size(min = 3)
   @Valid(param = "abc")

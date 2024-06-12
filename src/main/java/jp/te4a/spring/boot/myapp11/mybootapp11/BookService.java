@@ -46,9 +46,9 @@ public class BookService {
     return bookForm;
   }
 
-  public Optional<BookBean> findById(Integer id) {
+  /*public Optional<BookBean> findById(Integer id) {
     return bookRepository.findById(id);
-  }
+  }*/
 
   /*public void save(BookForm bookForm) {
     BookBean bookBean = new BookBean();
