@@ -1,11 +1,11 @@
-package jp.te4a.spring.boot.myapp11.mybootapp11;
+package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import jakarta.validation.constraints.*;
+import jp.te4a.spring.boot.myapp12.mybootapp12.TestValid.Valid;
 //import jakarta.validation.constraints.NotNull;
 //import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jp.te4a.spring.boot.myapp11.mybootapp11.TestValid.Valid;
 @Data
 @NoArgsConstructor
 public class BookForm {
@@ -15,6 +15,7 @@ public class BookForm {
   @Valid(param = "abc")
   private String title;
   @Size(min = 3, max = 20)
+  @Writter(ok="東北タロウ")
   private String writter;
   private String publisher;
   @Min(0)
