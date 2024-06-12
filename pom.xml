@@ -53,13 +53,13 @@
 				<!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-			<version>3.0.2</version>
-		</dependency>
+			<artifactId>jakarta.validation-api</artifactId><!-- validationのimportを使えるようにするもの -->
+			<version>3.0.2</version><!-- このdependencyのみでspring-bootをrunしてしまうと、validationのimportとエラーチェックjavaファイルが正しく実装されていても、spring-bootでエラーチェックが動作しない状態になっていた。 -->
+		</dependency><!-- そのため、以下のBean Validationを使えるようにするdependencyを追加することで、spring-bootでエラーチェックが動作するようになった -->
 
-		<dependency>
+		<dependency><!-- Bean Validationを使えるようにする依存関係の追加 -->
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
+			<artifactId>spring-boot-starter-validation</artifactId><!-- importしたvalidationをspring-bootでrunできるようにするもの -->
 		</dependency>
 
 
