@@ -31,7 +31,7 @@ public class BookController {
   if(result.hasErrors()) {
     return list(model);
   }
-  bookService.save(form);
+  bookService.create(form);
   return "redirect:/books";
 }
 

@@ -47,11 +47,11 @@ public class BookService {
     return bookRepository.findById(id);
   }
 
-  public void save(BookForm bookForm) {
+  /*public void save(BookForm bookForm) {
     BookBean bookBean = new BookBean();
     BeanUtils.copyProperties(bookForm, bookBean);
     bookRepository.save(bookBean);
-}
+}*/
   
 }
 
