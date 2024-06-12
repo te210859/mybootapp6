@@ -57,7 +57,7 @@
 			<version>3.0.2</version><!-- このdependencyのみでspring-bootをrunしてしまうと、validationのimportとエラーチェックjavaファイルが正しく実装されていても、spring-bootでエラーチェックが動作しない状態になっていた。 -->
 		</dependency><!-- そのため、以下のBean Validationを使えるようにするdependencyを追加することで、spring-bootでエラーチェックが動作するようになった -->
 
-		<dependency><!-- Bean Validationを使えるようにする依存関係の追加 -->
+		<dependency><!-- Bean Validationを使えるようにする（validationをstartする）依存関係の追加（spring-boot-starter-xxxxx） -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId><!-- importしたvalidationをspring-bootでrunできるようにするもの -->
 		</dependency>
