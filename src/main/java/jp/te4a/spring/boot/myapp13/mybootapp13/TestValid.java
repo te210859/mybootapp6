@@ -16,7 +16,7 @@ public class TestValid{
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Valid {
         String param();
-        String message() default  "input other than  {param}.";
+        String message() default  "input only  {param}.";
         // Classオブジェクトを得る（戻り値とする）メソッドgroups()
         // デフォルト値は空のクラス
         Class<?>[] groups() default{};
