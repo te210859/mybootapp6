@@ -1,8 +1,8 @@
-package jp.te4a.spring.boot.myapp12.mybootapp12;
+package jp.te4a.spring.boot.myapp13.mybootapp13;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import jp.te4a.spring.boot.myapp12.mybootapp12.TaroValid.Writter;
+import jp.te4a.spring.boot.myapp13.mybootapp13.TaroValid.Writter;
 
 public class TaroValidator implements ConstraintValidator<Writter,String>{
 	String ok;
