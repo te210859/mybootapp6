@@ -16,7 +16,7 @@ public class TaroValid{
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Writter {
         String ok();
-        String message() default  "input other than  {ok}.";
+        String message() default  "input only  {ok}.";
         // Classオブジェクトを得る（戻り値とする）メソッドgroups()
         // デフォルト値は空のクラス
         Class<?>[] groups() default{};
