@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
-public class TestValid{
+public class TaroValid{
     @Documented
-    @Constraint(validatedBy = TestValidator.class)
+    @Constraint(validatedBy = TaroValidator.class)
     @Target({ElementType.METHOD,ElementType.FIELD})
     @Retention(RetentionPolicy.RUNTIME)
     public @interface Valid {

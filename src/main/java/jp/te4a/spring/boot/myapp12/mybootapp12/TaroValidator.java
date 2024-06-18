@@ -2,12 +2,12 @@ package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import jp.te4a.spring.boot.myapp12.mybootapp12.TestValid.Valid;
+import jp.te4a.spring.boot.myapp12.mybootapp12.TaroValid.Valid;
 
-public class TestValidator implements ConstraintValidator<Valid,String>{
+public class TaroValidator implements ConstraintValidator<Valid,String>{
 	String param;
 	@Override
-	public void initialize(TestValid.Valid nv){ 
+	public void initialize(TaroValid.Valid nv){ 
 		param =  nv.param(); 
 	}
 	@Override
