@@ -1,6 +1,7 @@
 package jp.te4a.spring.boot.myapp12.mybootapp12;
 
 import jakarta.validation.constraints.*;
+import jp.te4a.spring.boot.myapp12.mybootapp12.TaroValid.Writter;
 import jp.te4a.spring.boot.myapp12.mybootapp12.TestValid.Valid;
 //import jakarta.validation.constraints.NotNull;
 //import jakarta.validation.constraints.Size;

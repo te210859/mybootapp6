@@ -14,9 +14,9 @@ public class TaroValid{
     @Constraint(validatedBy = TaroValidator.class)
     @Target({ElementType.METHOD,ElementType.FIELD})
     @Retention(RetentionPolicy.RUNTIME)
-    public @interface Valid {
-        String param();
-        String message() default  "input other than  {param}.";
+    public @interface Writter {
+        String ok();
+        String message() default  "input other than  {ok}.";
         // Classオブジェクトを得る（戻り値とする）メソッドgroups()
         // デフォルト値は空のクラス
         Class<?>[] groups() default{};
