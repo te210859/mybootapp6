@@ -16,7 +16,7 @@ public class TaroValidator implements ConstraintValidator<Writter,String>{
 			return false;
 		}
 		System.out.println(in.equals(ok));
-		return !in.equals(ok);
+		return in.equals(ok);
 		}
 }
 
